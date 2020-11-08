@@ -7,13 +7,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BlogComponent } from './blog/blog.component';
 
 import { FormularioComponent } from './formulario/formulario.component';
+import { NavComponent } from './nav/nav.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     BlogComponent,
-    FormularioComponent
+    FormularioComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
