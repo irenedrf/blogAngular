@@ -34,7 +34,12 @@
         </div>
         <div class="form-group">
             <label>Categoría</label>
-            <input type="text" class="form-control" formControlName="categoria">
+            <select class="form-control" formControlName="categoria">
+                <option value="" selected></option>
+                <option value="comida">Comidas típicas</option>
+                <option value="lugar">Lugares a visitar</option>
+                <option value="museo">Los mejores museos</option>
+            </select>
             <p class="text-danger"
                 *ngIf="formPost.get('categoria').hasError('required') && formPost.get('categoria').touched">
                 Hay que introducir una categoría.
