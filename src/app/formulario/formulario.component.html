@@ -1,0 +1,46 @@
+<div class="container">
+    <h2>Inserta una nueva entrada en tu blog</h2>
+    <button type="submit" class="btn btn-dark">Ir al blog</button>
+    <form [formGroup]="formPost" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Título</label>
+            <input type="text" class="form-control" formControlName="titulo">
+            <p class="text-danger"
+                *ngIf="formPost.get('titulo').hasError('required') && formPost.get('titulo').touched">
+                Hay que escribir un título.
+            </p>
+        </div>
+        <div class="form-group">
+            <label>Texto</label>
+            <input type="text" class="form-control" formControlName="texto">
+            <p class="text-danger" *ngIf="formPost.get('texto').hasError('required') && formPost.get('texto').touched">
+                Escribe algo.
+            </p>
+        </div>
+        <div class="form-group">
+            <label>Autor</label>
+            <input type="text" class="form-control" formControlName="autor">
+            <p class="text-danger" *ngIf="formPost.get('autor').hasError('required') && formPost.get('autor').touched">
+                Escribe algo.
+            </p>
+        </div>
+        <div class="form-group">
+            <label>Imagen</label>
+            <input type="text" class="form-control" formControlName="imagen">
+        </div>
+        <div class="form-group">
+            <label>Fecha</label>
+            <input type="text" class="form-control" formControlName="fecha">
+        </div>
+        <div class="form-group">
+            <label>Categoría</label>
+            <input type="text" class="form-control" formControlName="categoria">
+            <p class="text-danger"
+                *ngIf="formPost.get('categoria').hasError('required') && formPost.get('categoria').touched">
+                Hay que introducir una categoría.
+            </p>
+        </div>
+
+        <button type="submit" class="btn btn-dark">Publicar</button>
+    </form>
+</div>
