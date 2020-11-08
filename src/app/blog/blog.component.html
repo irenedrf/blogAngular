@@ -2,14 +2,34 @@
     <h2>Visita Madrid</h2>
     <form>
         <label>Busca los post que te interesan sobre...</label>
-        <select class="form-control" formControlName="categoria">
-            <option value="" selected></option>
+        <select class="form-control">
+            <option value="todos" selected>Todos</option>
             <option value="comida">Comidas típicas</option>
             <option value="lugar">Lugares a visitar</option>
             <option value="museo">Los mejores museos</option>
         </select>
 
     </form>
+
+    <div class="posts">
+        <h2>categoría del post aquí entre llaves (para quee aparezca y desaaparazca)</h2>
+        <div class="post" *ngFor="">
+            <div class="imagen">
+                <img src="">
+
+            </div>
+            <div class="descripcion">
+                <h3>Titulo</h3>
+                <p>texto</p>
+                <small>feecha</small>
+                <small>autor</small>
+
+            </div>
+
+
+        </div>
+
+    </div>
 
 
 </div>
