@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Post } from '../Post';
 import { ServicioService } from '../services/servicio.service';
 
@@ -9,12 +9,14 @@ import { ServicioService } from '../services/servicio.service';
 })
 export class BlogComponent implements OnInit {
 
-  arrPostsExistentes: Post[];
+  @Input() arrPostsExistentes: Post[];
 
   constructor(private servicio: ServicioService) { }
 
-  ngOnInit(): void {
-
+  ngOnInit() {
+    const arrPostsExistentes = this.servicio.getAllPosts();
+    console.log(arrPostsExistentes);
+    return arrPostsExistentes;
   }
 
 }

@@ -12,17 +12,18 @@
     </form>
 
     <div class="posts">
-        <h2>categoría del post aquí entre llaves (para quee aparezca y desaaparazca)</h2>
-        <div class="post" *ngFor="">
+        <h2>categoria sale aqui</h2>
+        <div class="post" *ngFor="let post of arrPostsExistentes">
+            <!-- RESOLVER: POR QUÉ NO ME IMPRIME NADA? buscar solución: en vez de llamar a la función en ngoninit en blog component ts, debería llamar a la función con el evento onchange del formulario superior, pasarle el valor por parámetro y que busque las categorías. en vez de pasarle este array, le debo pasar el array filtrado, asi que debo hacer funciones de filtrado -->
             <div class="imagen">
-                <img src="">
+                <img [src]="post.imagen">
 
             </div>
             <div class="descripcion">
-                <h3>Titulo</h3>
-                <p>texto</p>
-                <small>feecha</small>
-                <small>autor</small>
+                <h3>{{post.titulo}}</h3>
+                <p>{{post.texto}}</p>
+                <small>{{post.autor}}</small>
+                <small>{{post.fecha}}</small>
 
             </div>
 
