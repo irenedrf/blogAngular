@@ -1,8 +1,11 @@
 <div class="container">
-    <ul class="menu">
-        <li [routerLink]="['blog']" routerLinkActive="activa">BLOG</li>
-        <li [routerLink]="['new']" routerLinkActive="activa">NEW</li>
-    </ul>
+    <div class="menu">
+        <button type="button" class="btn btn-secondary" [routerLink]="['blog']" routerLinkActive="activa">BLOG</button>
+        <button type="button" class="btn btn-secondary" [routerLink]="['new']" routerLinkActive="activa">NEW</button>
+
+    </div>
 </div>
+
+
 
 <router-outlet></router-outlet>
