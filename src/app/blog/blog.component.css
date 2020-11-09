@@ -1,8 +1,32 @@
 h2{
     margin:50px 0px 0px 0px;
 }
+h3{
+    margin: 10px 0px 20px 0px;
+}
+
+.post{
+    display: flex;
+    margin: 20px 0px;
+}
+
+.imagen{
+    max-width: 400px;
+}
+.descripcion{
+    padding: 25px;
+}
 
 label{
     margin:20px 0px;
 }
 
+span{
+    color: grey;
+    text-align: right;
+}
+
+img{
+    display: block;
+    width: 100%;
+}

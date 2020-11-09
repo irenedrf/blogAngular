@@ -15,17 +15,12 @@ export class BlogComponent implements OnInit {
 
   constructor(private servicio: ServicioService) { }
 
-  ngOnInit() {
-
+  async ngOnInit() {
+    return this.arrPostsExistentes = await this.servicio.getAllPosts();
   }
 
-  async onChange(pCategoria) {
-    if (pCategoria === 'todos') {
-      return this.arrPostsExistentes = await this.servicio.getAllPosts();
-    } else {
-      return this.arrPostsExistentes = await this.servicio.getByCategory(pCategoria); //problema: aquí mee los está cogiendo todos, no filtrados, a pesar de que le paso categoría
-    }
-
+  async onChange(pCategory) {
+    return this.arrPostsExistentes = await this.servicio.getByCategory(pCategory)
   }
 
 }
