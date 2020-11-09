@@ -2,7 +2,7 @@
     <h2>Visita Madrid</h2>
     <form>
         <label>Busca los post que te interesan sobre...</label>
-        <select class="form-control">
+        <select class="form-control" (change)="onChange($event.target.value)">
             <option value="todos" selected>Todos</option>
             <option value="comida">Comidas típicas</option>
             <option value="lugar">Lugares a visitar</option>
@@ -12,7 +12,7 @@
     </form>
 
     <div class="posts">
-        <h2>categoria sale aqui</h2>
+        <h2>Categoría: </h2>
         <div class="post" *ngFor="let post of arrPostsExistentes">
             <!-- RESOLVER: POR QUÉ NO ME IMPRIME NADA? buscar solución: en vez de llamar a la función en ngoninit en blog component ts, debería llamar a la función con el evento onchange del formulario superior, pasarle el valor por parámetro y que busque las categorías. en vez de pasarle este array, le debo pasar el array filtrado, asi que debo hacer funciones de filtrado -->
             <div class="imagen">
