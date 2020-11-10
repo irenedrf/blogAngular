@@ -11,15 +11,8 @@
         </div>
         <div class="form-group">
             <label>Texto</label>
-            <input type="text" class="form-control" formControlName="texto">
+            <textarea class="form-control" rows="3" formControlName="texto"></textarea>
             <p class="text-danger" *ngIf="formPost.get('texto').hasError('required') && formPost.get('texto').touched">
-                Escribe algo.
-            </p>
-        </div>
-        <div class="form-group">
-            <label>Autor</label>
-            <input type="text" class="form-control" formControlName="autor">
-            <p class="text-danger" *ngIf="formPost.get('autor').hasError('required') && formPost.get('autor').touched">
                 Escribe algo.
             </p>
         </div>
@@ -28,16 +21,21 @@
             <input type="text" class="form-control" formControlName="imagen">
         </div>
         <div class="form-group">
+            <label>Autor</label>
+            <input type="text" class="form-control" formControlName="autor">
+            <p class="text-danger" *ngIf="formPost.get('autor').hasError('required') && formPost.get('autor').touched">
+                Escribe algo.
+            </p>
+        </div>
+
+        <div class="form-group">
             <label>Fecha</label>
             <input type="text" class="form-control" formControlName="fecha">
         </div>
         <div class="form-group">
             <label>Categoría</label>
             <select class="form-control" formControlName="categoria">
-                <option value="" selected></option>
-                <option value="comida">Comidas típicas</option>
-                <option value="lugar">Lugares a visitar</option>
-                <option value="museo">Los mejores museos</option>
+                <option *ngFor="let categoria of arrCategoriesForm" value={{categoria}}>{{categoria}}</option>
             </select>
             <p class="text-danger"
                 *ngIf="formPost.get('categoria').hasError('required') && formPost.get('categoria').touched">
@@ -45,6 +43,9 @@
             </p>
         </div>
 
-        <button type="submit" class="btn btn-dark">Publicar</button>
+        <button type="submit" class="btn btn-dark" [disabled]="!formPost.valid">Publicar</button>
+
+
+        <!-- importante. cambiar el desplegable de categorías: sea un array de categorías.además hacer pipe y validador para la fecha (que tenemos que poner como tipo Date en el interfaz), si puede ser un caledario desplegable. además hacer mensaje en blog de "mostrando artículos de categoría..." -->
     </form>
 </div>

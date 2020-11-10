@@ -6,9 +6,15 @@ import { Post } from '../Post';
 })
 export class ServicioService {
   private arrPosts: Post[];
+  private arrCategories: string[];
 
   constructor() {
     this.arrPosts = [];
+    this.arrCategories = ['', 'Comida típica', 'Lugares a visitar', 'Museos destacados'];
+  }
+
+  getCategories(): string[] {
+    return this.arrCategories;
   }
 
   getAllPosts(): Post[] {
@@ -16,7 +22,7 @@ export class ServicioService {
   }
 
   getByCategory(pCategory): Promise<Post[]> {
-    if (pCategory === "") {
+    if (pCategory === '') {
       return Promise.resolve(this.arrPosts);
     } else {
       return Promise.resolve(this.arrPosts.filter(post => post.categoria === pCategory));

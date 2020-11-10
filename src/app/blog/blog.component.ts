@@ -9,6 +9,7 @@ import { ServicioService } from '../services/servicio.service';
 })
 export class BlogComponent implements OnInit {
 
+  arrCategoriesBlog: string[];
   categoria: string;
 
   @Input() arrPostsExistentes: Post[];
@@ -16,6 +17,7 @@ export class BlogComponent implements OnInit {
   constructor(private servicio: ServicioService) { }
 
   async ngOnInit() {
+    this.arrCategoriesBlog = await this.servicio.getCategories();
     return this.arrPostsExistentes = await this.servicio.getAllPosts();
   }
 

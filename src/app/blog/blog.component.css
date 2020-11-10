@@ -5,16 +5,29 @@ h3{
     margin: 10px 0px 20px 0px;
 }
 
+
 .post{
+    max-width: 100%;
     display: flex;
     margin: 20px 0px;
+    
 }
 
 .imagen{
-    max-width: 400px;
+    width: 25%;
+    
 }
+
 .descripcion{
-    padding: 25px;
+    width: 55%;
+    padding: 0px 15px;
+    
+}
+.boton{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 label{

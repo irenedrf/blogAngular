@@ -3,12 +3,8 @@
     <form>
         <label>Busca los post que te interesan sobre...</label>
         <select class="form-control" (change)="onChange($event.target.value)">
-            <option value="" selected>Todos</option>
-            <option value="comida">Comidas típicas</option>
-            <option value="lugar">Lugares a visitar</option>
-            <option value="museo">Los mejores museos</option>
+            <option *ngFor="let categoria of arrCategoriesBlog" value={{categoria}}>{{categoria}}</option>
         </select>
-
     </form>
 
     <div class="posts">
@@ -22,6 +18,9 @@
                 <p>Autor: {{post.autor}}</p>
                 <p><span>Publicado: {{post.fecha}}</span></p>
 
+            </div>
+            <div class="boton">
+                <button type="submit" class="btn btn-dark">Eliminar post</button>
             </div>
 
 

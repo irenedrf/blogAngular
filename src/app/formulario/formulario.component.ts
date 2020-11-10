@@ -8,8 +8,13 @@ import { ServicioService } from '../services/servicio.service';
   styleUrls: ['./formulario.component.css']
 })
 export class FormularioComponent implements OnInit {
+
+  //tenemos el array de categorias en el servicio. hay que hacerlo llegar al blog y al formulario
+  arrCategoriesForm: string[];
   formPost: FormGroup;
+
   constructor(private servicio: ServicioService) {
+
     this.formPost = new FormGroup({
       titulo: new FormControl('', [Validators.required]),
       texto: new FormControl('', [Validators.required]),
@@ -21,11 +26,13 @@ export class FormularioComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
+  async ngOnInit() {
+    this.arrCategoriesForm = await this.servicio.getCategories();
   }
 
   async onSubmit() {
     await this.servicio.addPost(this.formPost.value);
+    this.formPost.reset();
   }
 
 }
