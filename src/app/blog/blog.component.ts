@@ -12,7 +12,9 @@ export class BlogComponent implements OnInit {
   arrCategoriesBlog: string[];
   categoria: string;
 
+
   @Input() arrPostsExistentes: Post[];
+
 
   constructor(private servicio: ServicioService) { }
 
@@ -24,5 +26,7 @@ export class BlogComponent implements OnInit {
   async onChange(pCategory) {
     return this.arrPostsExistentes = await this.servicio.getByCategory(pCategory)
   }
+
+
 
 }

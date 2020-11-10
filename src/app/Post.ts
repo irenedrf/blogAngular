@@ -3,6 +3,6 @@ export interface Post {
     texto: string;
     autor: string;
     imagen: string;
-    fecha: string; //date?? hay que hacer un pipe con el formato que quiera
+    fecha: Date;
     categoria: string;
 }

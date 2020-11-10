@@ -30,7 +30,10 @@
 
         <div class="form-group">
             <label>Fecha</label>
-            <input type="text" class="form-control" formControlName="fecha">
+            <input type="date" class="form-control" formControlName="fecha" placeholder="dd/mm/yy">
+            <p class="text-danger" *ngIf="formPost.get('fecha').hasError('required') && formPost.get('fecha').touched">
+                Selecciona una fecha.
+            </p>
         </div>
         <div class="form-group">
             <label>Categoría</label>
@@ -46,6 +49,6 @@
         <button type="submit" class="btn btn-dark" [disabled]="!formPost.valid">Publicar</button>
 
 
-        <!-- importante. cambiar el desplegable de categorías: sea un array de categorías.además hacer pipe y validador para la fecha (que tenemos que poner como tipo Date en el interfaz), si puede ser un caledario desplegable. además hacer mensaje en blog de "mostrando artículos de categoría..." -->
+        <!-- importante..además hacer pipe y validador para la fecha (que tenemos que poner como tipo Date en el interfaz), si puede ser un caledario desplegable. -->
     </form>
 </div>

@@ -20,7 +20,7 @@ export class FormularioComponent implements OnInit {
       texto: new FormControl('', [Validators.required]),
       autor: new FormControl('', [Validators.required]),
       imagen: new FormControl('', [Validators.required]),
-      fecha: new FormControl('', [Validators.required]),
+      fecha: new FormControl('', [Validators.required,]),
       categoria: new FormControl('', [Validators.required]),
 
     });
@@ -34,5 +34,7 @@ export class FormularioComponent implements OnInit {
     await this.servicio.addPost(this.formPost.value);
     this.formPost.reset();
   }
+
+
 
 }

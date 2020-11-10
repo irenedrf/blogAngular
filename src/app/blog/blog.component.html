@@ -8,6 +8,7 @@
     </form>
 
     <div class="posts">
+        <!-- <h4>Hay {{arrPostsExistentes.length}} posts de la categoría seleccionada.</h4> -->
         <div class="post" *ngFor="let post of arrPostsExistentes">
             <div class="imagen">
                 <img [src]="post.imagen">
@@ -16,13 +17,8 @@
                 <h3>{{post.titulo}}</h3>
                 <p>{{post.texto}}</p>
                 <p>Autor: {{post.autor}}</p>
-                <p><span>Publicado: {{post.fecha}}</span></p>
-
+                <p><span>Publicado: {{post.fecha | date:'dd/MM/yyyy'}}</span></p>
             </div>
-            <div class="boton">
-                <button type="submit" class="btn btn-dark">Eliminar post</button>
-            </div>
-
 
         </div>
 
