@@ -1,14 +1,14 @@
-<div class="container">
-    <h2>Visita Madrid</h2>
+<div class="buscador">
+    <h2>Encuentra lo que buscas</h2>
     <form>
-        <label>Busca los post que te interesan sobre...</label>
+        <label>Quiero ver posts sobre...</label>
         <select class="form-control" (change)="onChange($event.target.value)">
             <option *ngFor="let categoria of arrCategoriesBlog" value={{categoria}}>{{categoria}}</option>
         </select>
     </form>
 
     <div class="posts">
-        <!-- <h4>Hay {{arrPostsExistentes.length}} posts de la categoría seleccionada.</h4> -->
+        <h4>Hay {{arrPostsExistentes.length}} posts de la categoría seleccionada.</h4>
         <div class="post" *ngFor="let post of arrPostsExistentes">
             <div class="imagen">
                 <img [src]="post.imagen">

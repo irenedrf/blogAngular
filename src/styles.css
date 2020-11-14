@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@700&family=Indie+Flower&display=swap');
+
+/* 
+
+font-family: 'Big Shoulders Stencil Text', cursive;
+
+font-family: 'Indie Flower', cursive; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    width: 100vw;
+}
+
+
+.hero{
+    width: 100%;
+    background-image: url("https://distritocastellananorte.com/wp-content/uploads/2018/07/vistas-panoramicas-desde-el-circulo-de-bellas-artes-madrid-cba.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.container{
+    text-align: center;
+    background-color:lightgray;
+    width: 30%;
+    padding: 25px;
+    
+}
+h1{
+    font-family: 'Indie Flower', cursive;
+}
+span{
+    font-family: 'Big Shoulders Stencil Text', cursive;
+}

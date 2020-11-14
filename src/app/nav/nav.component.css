@@ -1,20 +1,15 @@
-.container{
-    display: flex;
-    justify-content: center;
-    border-bottom: 1px solid grey;
-}
-.menu{
-    list-style: none;
+.nav{
+   
     display: flex;
     justify-content: space-evenly;
-    width: 100%;
-    padding: 15px 0px;
-    
 }
 
-.btn-dark{
+
+
+.btn-outline-dark{
     padding: 10px 30px;
-    margin: 10px 0px;
+    margin: 20px 0px;
+    border: none;
 }
 
 

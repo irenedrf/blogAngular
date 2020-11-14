@@ -1,4 +1,4 @@
-<div class="container">
+<div class="formulario">
     <h2>Inserta una nueva entrada en tu blog</h2>
     <form [formGroup]="formPost" (ngSubmit)="onSubmit()">
         <div class="form-group">
@@ -48,7 +48,5 @@
 
         <button type="submit" class="btn btn-dark" [disabled]="!formPost.valid">Publicar</button>
 
-
-        <!-- importante..además hacer pipe y validador para la fecha (que tenemos que poner como tipo Date en el interfaz), si puede ser un caledario desplegable. -->
     </form>
 </div>
