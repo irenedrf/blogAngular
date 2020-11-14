@@ -8,6 +8,7 @@ import { BlogComponent } from './blog/blog.component';
 
 import { FormularioComponent } from './formulario/formulario.component';
 import { NavComponent } from './nav/nav.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { NavComponent } from './nav/nav.component';
     AppComponent,
     BlogComponent,
     FormularioComponent,
-    NavComponent
+    NavComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
