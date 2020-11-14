@@ -12,12 +12,16 @@
         <div class="post" *ngFor="let post of arrPostsExistentes">
             <div class="imagen">
                 <img [src]="post.imagen">
+
             </div>
             <div class="descripcion">
                 <h3>{{post.titulo}}</h3>
                 <p>{{post.texto}}</p>
-                <p>Autor: {{post.autor}}</p>
-                <p><span>Publicado: {{post.fecha | date:'dd/MM/yyyy'}}</span></p>
+                <div class="row">
+                    <p><span>Autor: {{post.autor}}</span></p>
+                    <p><span>Publicado: {{post.fecha | date:'dd/MM/yyyy'}}</span></p>
+                </div>
+
             </div>
 
         </div>
