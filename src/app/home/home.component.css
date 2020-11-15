@@ -39,3 +39,14 @@ a{
     color:inherit;
 }
 
+@media(max-width:650px){
+    .home section{
+        flex-flow: column;
+    }
+    article, aside{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+}
+
