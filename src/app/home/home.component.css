@@ -25,12 +25,12 @@ aside p{
 
 h3{
     margin-bottom: 20px;
-    font-family: 'Indie Flower', cursive;
+    font-family: var(--fuente_titulos);
     font-size: 2.5em;
 }
 aside h3, span{
     margin-bottom: 20px;
-    font-family: 'Big Shoulders Stencil Text', cursive;
+    font-family: var(--fuente_secundaria);
     font-size: 1.5em;
     cursor: pointer;
 }

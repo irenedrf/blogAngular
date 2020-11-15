@@ -1,9 +1,9 @@
 h2{
-    font-family: 'Indie Flower', cursive;
+    font-family: var(--fuente_titulos);
     font-size: 2.5em;
 }
 h3{
-    font-family: 'Indie Flower', cursive;
+    font-family: var(--fuente_titulos);
     margin: 0px 0px 20px 0px;
 }
 h4{

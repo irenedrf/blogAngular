@@ -13,16 +13,22 @@ font-family: 'Indie Flower', cursive; */
     box-sizing: border-box;
 }
 
+:root{
+    --fuente_titulos:'Indie Flower', cursive;
+    --fuente_secundaria:'Big Shoulders Stencil Text', cursive;
+}
+
 .wrapper{
     max-width: 100vw;
 }
 
 
 .hero{
-    width: 100%;
+    
     background-image: url("https://distritocastellananorte.com/wp-content/uploads/2018/07/vistas-panoramicas-desde-el-circulo-de-bellas-artes-madrid-cba.jpg");
+    background-position:fixed; 
+    background-size: cover; 
     background-repeat: no-repeat;
-    background-size: 100%;
     height: 500px;
     display: flex;
     align-items: center;
@@ -37,8 +43,32 @@ font-family: 'Indie Flower', cursive; */
     
 }
 h1{
-    font-family: 'Indie Flower', cursive;
+    font-family: var(--fuente_titulos);
 }
 span{
-    font-family: 'Big Shoulders Stencil Text', cursive;
+    font-family: var(--fuente_secundaria);
+}
+
+footer{
+    width: 100%;
+    background-color: black;
+    color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2%;
+    font-family: var(--fuente_secundaria);
+}
+
+@media(max-width:650px){
+    .container{  
+        width: 30%;
+        padding: 15px;
+        
+    }
+    h1, span{
+       font-size: 1.6em;
+    }
+    
+
 }
